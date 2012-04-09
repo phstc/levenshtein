@@ -1,4 +1,5 @@
 Array.prototype.minimum = () ->
+  # Hmmm... I know, I know... I can do it more dynamic.
   return Math.min(Math.min(this[0], this[1]), this[2])
 
 
