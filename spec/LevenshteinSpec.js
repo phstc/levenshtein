@@ -10,6 +10,7 @@ describe("Levenshtein", function() {
   describe("Distance calculation", function(){
     it("should do a deletion", function(){
      expect("a".levenshteinDistance("aa")).toEqual(1)
+     expect("pabloo".levenshteinDistance("pablo")).toEqual(1)
     });
     it("should do an insertion", function(){
      expect("a".levenshteinDistance("ab")).toEqual(1)

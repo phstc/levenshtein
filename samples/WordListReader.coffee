@@ -6,13 +6,13 @@ includeInThisContext = (path) ->
     code = fs.readFileSync path
     vm.runInThisContext code, path
 
-includeInThisContext "#{__dirname}/Levenshtein.js"
+includeInThisContext "#{__dirname}/../src/Levenshtein.js"
 
 startTime = new Date().getTime()
 
 # 4.793 seconds
 
-fs.readFile "#{__dirname}/../assets/word.list.txt", 'utf-8', (err, data) ->
+fs.readFile "#{__dirname}/word.list.txt", 'utf-8', (err, data) ->
   if err
     console.error "Could not open file: %s", err
     process.exit 1
