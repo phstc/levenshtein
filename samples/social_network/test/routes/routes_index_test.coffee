@@ -1,11 +1,16 @@
-app = require('../app')
-routes = require('../routes')
+require("should")
 
+app = require('../../app')
+routes = require('../../routes')
+
+# TODO See TODOs on friend_test.coffee
 describe 'routes', ->
   describe '#levenshtein', ->
-    it 'should return rest', -> 
-      mockReq = null
+    it 'should return rest', (done) -> 
+      mockReq = 
+        query: []
       mockRes =
         json: (data) ->
-          data[0].should.equal("test")
+          data.length.should.equal(18)
+          done()
       routes.levenshtein(mockReq, mockRes)

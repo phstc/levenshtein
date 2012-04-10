@@ -1,18 +1,23 @@
 (function() {
   var app, routes;
 
+  require("should");
+
   app = require('../../app');
 
   routes = require('../../routes');
 
   describe('routes', function() {
     return describe('#levenshtein', function() {
-      return it('should return rest', function() {
+      return it('should return rest', function(done) {
         var mockReq, mockRes;
-        mockReq = null;
+        mockReq = {
+          query: []
+        };
         mockRes = {
           json: function(data) {
-            return data[0].should.equal("test");
+            data.length.should.equal(18);
+            return done();
           }
         };
         return routes.levenshtein(mockReq, mockRes);
