@@ -9,7 +9,7 @@ exports.index = function(req, res){
 };
 
 exports.levenshtein = function(req, res){
-  friend.findByNameDistance(req.query["name"] || "causes", function(friends){
+  friend.findByNameDistance(req.params.name || "causes", function(friends){
 	  res.json(friends);
   });
 };
