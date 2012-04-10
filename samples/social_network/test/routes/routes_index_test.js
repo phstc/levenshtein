@@ -1,13 +1,13 @@
 (function() {
   var app, routes;
 
-  app = require('../app');
+  app = require('../../app');
 
-  routes = require('../routes');
+  routes = require('../../routes');
 
   describe('routes', function() {
-    return describe('#index', function() {
-      return it('should be a function', function() {
+    return describe('#levenshtein', function() {
+      return it('should return rest', function() {
         var mockReq, mockRes;
         mockReq = null;
         mockRes = {

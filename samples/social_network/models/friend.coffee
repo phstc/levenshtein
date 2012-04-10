@@ -1,0 +1,2 @@
+exports.findByNameDistance = (name) =>
+  name

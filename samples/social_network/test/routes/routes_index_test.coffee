@@ -2,8 +2,8 @@ app = require('../app')
 routes = require('../routes')
 
 describe 'routes', ->
-  describe '#index', ->
-    it 'should be a function', -> 
+  describe '#levenshtein', ->
+    it 'should return rest', -> 
       mockReq = null
       mockRes =
         json: (data) ->
