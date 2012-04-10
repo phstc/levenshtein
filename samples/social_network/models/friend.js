@@ -1,17 +1,11 @@
 (function() {
-  var fs, includeInThisContext, vm;
+  var fs, util;
 
   fs = require('fs');
 
-  vm = require('vm');
+  util = require("" + __dirname + "/../lib/util");
 
-  includeInThisContext = function(path) {
-    var code;
-    code = fs.readFileSync(path);
-    return vm.runInThisContext(code, path);
-  };
-
-  includeInThisContext("" + __dirname + "/../../../src/Levenshtein.js");
+  util.includeInThisContext("" + __dirname + "/../../../src/Levenshtein.js");
 
   exports.findByNameDistance = function(name, callback) {
     return fs.readFile("" + __dirname + "/../../word.list.txt", 'utf-8', function(err, data) {

@@ -1,13 +1,7 @@
 fs = require 'fs'
-vm = require 'vm'
+util = require "#{__dirname}/../lib/util"
 
-includeInThisContext = (path) ->
-    # http://stackoverflow.com/a/9946809/464685
-    code = fs.readFileSync path
-    vm.runInThisContext code, path
-
-includeInThisContext "#{__dirname}/../../../src/Levenshtein.js"
-
+util.includeInThisContext "#{__dirname}/../../../src/Levenshtein.js"
 
 exports.findByNameDistance = (name, callback) ->
   fs.readFile "#{__dirname}/../../word.list.txt", 'utf-8', (err, data) ->
