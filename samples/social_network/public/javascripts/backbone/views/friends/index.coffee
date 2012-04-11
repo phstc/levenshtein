@@ -1,6 +1,6 @@
 class Levenshtein.Views.FriendsIndex extends Backbone.View
 
-  template: _.template "<h2><%= name %> (<%= collection.length %>)</h2><ul><% _.each(collection.models, function(m){ %><li class='friend_item'><a href='/<%= m.get('name') %>'><%= m.get('name') %></a></li><% }); %></ul>"
+  template: _.template $("#friend_names_template").html()
 	
   tagName: "div"
 

@@ -1,3 +1,9 @@
+script(type="underscore/template", id="friend_names_template")
+  <h2><%= name %> (<%= collection.length %>)</h2>
+  <ul><% _.each(collection.models, function(m){ %>
+  <li class='friend_item'><a href='/<%= m.get('name') %>'><%= m.get('name') %></a></li>
+  <% }); %>
+  </ul>
 div(id="loading") Loading...
 div.container
   h1 Friends by Levenshtein Distance
