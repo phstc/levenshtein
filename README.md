@@ -3,8 +3,14 @@
 It's an implementation of [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) in [CoffeeScript](http://coffeescript.org).
 
 ## The implementation
+    
+### CoffeeScript
 
-```src/Levenshtein.coffee```
+    src/Levenshtein.coffee
+
+### Javascript
+
+    src/Levenshtein.js
 
 ## How to use it?
 
