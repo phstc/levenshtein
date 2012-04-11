@@ -10,20 +10,23 @@
       FriendsIndex.__super__.constructor.apply(this, arguments);
     }
 
-    FriendsIndex.prototype.template = _.template("<h2><%= name %> (<%= collection.length %>)</h2><ul><% _.each(collection.models, function(m){ %><li class='friend_item'><a href='/<%= m.get('name') %>'><%= m.get('name') %></a></li><% }); %></ul>");
-
     FriendsIndex.prototype.tagName = "div";
 
     FriendsIndex.prototype.initialize = function() {
-      this.collection.on('reset', this.render, this);
-      return this.collection.on("add", this.addFriend, this);
+      return this.collection.on('reset', this.render, this);
+    };
+
+    FriendsIndex.prototype.renderFriend = function(model) {
+      console.log("blah!");
+      return console.log(model);
     };
 
     FriendsIndex.prototype.render = function() {
+      this.template = this.template || _.template($("#friend_names_template").html());
       $(this.el).html(this.template({
-        name: this.collection.name,
         collection: this.collection
       }));
+      this.collection.each(this.renderFriend);
       return this;
     };
 
