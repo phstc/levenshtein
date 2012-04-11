@@ -9,5 +9,5 @@ class Levenshtein.Views.FriendsIndex extends Backbone.View
     @collection.on("add", @addFriend, this)
 
   render: ->
-    $(@el).html(@template(name: @collection.name, collection: @collection))
+    $(@el).html(@template(collection: @collection))
     this
