@@ -3,7 +3,8 @@ require("should")
 app = require('../../app')
 routes = require('../../routes')
 
-# TODO See TODOs on friend_test.coffee
+friend = require('../../models/friend.js')
+
 describe 'routes', ->
   describe '#levenshtein', ->
     it 'should return rest', (done) -> 
@@ -12,6 +13,8 @@ describe 'routes', ->
         params: {}
       mockRes =
         json: (data) ->
-          data.length.should.equal(18)
+          data[0].name.should.equal("cause")
           done()
+      friend.readWordList = (callback) ->
+        callback "cause"
       routes.levenshtein(mockReq, mockRes)

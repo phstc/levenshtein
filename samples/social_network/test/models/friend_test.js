@@ -1,17 +1,19 @@
 (function() {
-  var causesFriends, friend;
+  var friend;
 
   require("should");
 
   friend = require('../../models/friend.js');
 
-  causesFriends = ["camuses", "carses", "cases", "caules", "cause", "caused", "causen", "causer", "causers", "causey", "causeys", "cauves", "cayuses", "chuses", "clauses", "cruses", "hauses", "pauses"];
-
   describe('friends', function() {
     return describe('#findByNameDistance', function() {
       return it('should return rest', function(done) {
+        friend.readWordList = function(callback) {
+          return callback("cause");
+        };
         return friend.findByNameDistance("causes", function(friends) {
-          friends.length.should.equal(18);
+          friends.length.should.equal(1);
+          friends[0].should.equal("cause");
           return done();
         });
       });

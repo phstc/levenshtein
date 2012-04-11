@@ -1,11 +1,13 @@
 (function() {
-  var app, routes;
+  var app, friend, routes;
 
   require("should");
 
   app = require('../../app');
 
   routes = require('../../routes');
+
+  friend = require('../../models/friend.js');
 
   describe('routes', function() {
     return describe('#levenshtein', function() {
@@ -17,10 +19,12 @@
         };
         mockRes = {
           json: function(data) {
-            data.length.should.equal(18);
-            console.log(data);
+            data[0].name.should.equal("cause");
             return done();
           }
+        };
+        friend.readWordList = function(callback) {
+          return callback("cause");
         };
         return routes.levenshtein(mockReq, mockRes);
       });
