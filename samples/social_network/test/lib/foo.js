@@ -1,7 +1,6 @@
 (function() {
-  var foo;
 
-  foo = function() {
+  this.foo = function() {
     return console.log("foo");
   };
 

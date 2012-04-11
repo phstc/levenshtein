@@ -29,8 +29,9 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
-app.get('/levenshtein', routes.levenshtein);
-app.get('/levenshtein/:name', routes.levenshtein);
+app.get('/:name', routes.index);
+app.get('/api/levenshtein', routes.levenshtein);
+app.get('/api/levenshtein/:name', routes.levenshtein);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

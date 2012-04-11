@@ -1,9 +1,9 @@
 require("should")
 util = require('../../lib/util.js')
 
+util.includeInThisContext "#{__dirname}/foo.js"
+
 describe 'util', ->
-  describe '#includeInThisContext', ->
+  describe '#includeInThisContext', ->      
     it 'should include foo', ->
-      # TODO Include doesn't work here. ReferenceError: foo is not defined :/
-      util.includeInThisContext "#{__dirname}/foo.js"
       foo.should.be.a.function

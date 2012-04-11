@@ -5,10 +5,11 @@
 
   util = require('../../lib/util.js');
 
+  util.includeInThisContext("" + __dirname + "/foo.js");
+
   describe('util', function() {
     return describe('#includeInThisContext', function() {
       return it('should include foo', function() {
-        util.includeInThisContext("" + __dirname + "/foo.js");
         return foo.should.be.a["function"];
       });
     });

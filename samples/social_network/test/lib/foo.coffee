@@ -1,2 +1,2 @@
-foo = ->
+this.foo = ->
   console.log "foo"

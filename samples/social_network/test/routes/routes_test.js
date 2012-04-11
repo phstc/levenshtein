@@ -12,11 +12,13 @@
       return it('should return rest', function(done) {
         var mockReq, mockRes;
         mockReq = {
-          query: []
+          query: [],
+          params: {}
         };
         mockRes = {
           json: function(data) {
             data.length.should.equal(18);
+            console.log(data);
             return done();
           }
         };

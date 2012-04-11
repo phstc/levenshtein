@@ -11,7 +11,11 @@
 
   exports.levenshtein = function(req, res) {
     return friend.findByNameDistance(req.params.name || "causes", function(friends) {
-      return res.json(friends);
+      return res.json(friends.map(function(name) {
+        return {
+          name: name
+        };
+      }));
     });
   };
 

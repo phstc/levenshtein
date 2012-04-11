@@ -8,7 +8,8 @@ describe 'routes', ->
   describe '#levenshtein', ->
     it 'should return rest', (done) -> 
       mockReq = 
-        query: []
+        query: [],
+        params: {}
       mockRes =
         json: (data) ->
           data.length.should.equal(18)
