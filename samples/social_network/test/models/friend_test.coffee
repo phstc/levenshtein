@@ -1,13 +1,13 @@
-require("should")
+require "should"
 
-friend = require('../../models/friend.js')
+friend = require "../../models/friend.js"
 
-describe 'friends', ->
-  describe '#findByNameDistance', ->
-    it 'should return rest', (done) -> 
+describe "friends", ->
+  describe "#findByNameDistance", ->
+    it "returns the distance", (done) ->
       friend.readWordList = (callback) ->
         callback "cause"
-      friend.findByNameDistance "causes", (friends) -> 
+      friend.findByNameDistance "causes", (friends) ->
         friends.length.should.equal 1
         friends[0].should.equal "cause"
         done()
