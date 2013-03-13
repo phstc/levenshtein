@@ -13,7 +13,7 @@ describe "Levenshtein", ->
      ("a".levenshteinDistance("aa")).should.equal 1
      ("pabloo".levenshteinDistance("pablo")).should.equal 1
 
-    it "peforms an insertion", ->
+    it "performs an insertion", ->
      ("a".levenshteinDistance("ab")).should.equal 1
      ("ablo".levenshteinDistance("pablo")).should.equal 1
 
