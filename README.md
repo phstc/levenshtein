@@ -10,13 +10,25 @@ It's an implementation of [Levenshtein distance](http://en.wikipedia.org/wiki/Le
 
 ## How to use it?
 
+### To compile CoffeeScript into JavaScript
+
+    $ coffee --compile src/Levenshtein.coffee
+
+### To run in the browser
+
 Firstly include the Levenshtein implementation in your code.
 
     <script src="Levenshtein.js" type="text/javascript"></script>
 
-Then... Run it!
+Then...
 
-    "pablo".levenshteinDistance "fablo" # should return 1 (substitution)
+    <script>
+      "pablo".levenshteinDistance("fablo") // should return 1 (substitution)
+    </script>
+
+### To run the test suite
+
+    $ npm test
 
 ## Node.js?
 

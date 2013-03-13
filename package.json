@@ -1,0 +1,23 @@
+{
+  "name": "levenshtein-distance",
+  "version": "0.0.1",
+  "description": "Levenshtein distance implemented in CoffeeScript",
+  "keywords": [ "Levenshtein" ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phstc/levenshtein"
+  },
+  "author": "Pablo Cantero <pablo@pablocantero.com>",
+  "devDependencies": {
+    "mocha": "1.0.1",
+    "should": "0.6.0",
+    "coffee-script": "1.2.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter list --compilers coffee:coffee-script"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
+}
+
