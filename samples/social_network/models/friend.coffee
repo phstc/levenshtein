@@ -1,7 +1,7 @@
 fs = require "fs"
 util = require "#{__dirname}/../lib/util"
 
-util.includeInThisContext "#{__dirname}/../../../src/Levenshtein.js"
+require "#{__dirname}/../../../src/Levenshtein"
 
 exports.readWordList = (callback) ->
   fs.readFile "#{__dirname}/../../word.list.txt", "utf-8", (err, data) ->

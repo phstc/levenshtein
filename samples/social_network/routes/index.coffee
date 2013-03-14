@@ -1,4 +1,4 @@
-friend = require "../models/friend.js"
+friend = require "../models/friend"
 
 exports.index = (req, res) ->
   res.render "index", title: "Express"

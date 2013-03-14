@@ -6,3 +6,4 @@ class Levenshtein.Views.FriendsShow extends Backbone.View
   render: ->
     $(@el).html @template(model: @model)
     @
+

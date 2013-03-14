@@ -1,20 +1,20 @@
-require("should")
+require "should"
 
-app = require('../../app')
-routes = require('../../routes')
+app = require "../../app"
+routes = require "../../routes"
+friend = require "../../models/friend"
 
-friend = require('../../models/friend.js')
-
-describe 'routes', ->
-  describe '#levenshtein', ->
-    it 'should return rest', (done) -> 
-      mockReq = 
-        query: [],
-        params: {}
+describe "Routes", ->
+  describe "#levenshtein", ->
+    it "returns rest", (done) ->
+      mockReq = query: [], params: {}
       mockRes =
         json: (data) ->
-          data[0].name.should.equal("cause")
+          data[0].name.should.equal "cause"
           done()
+
+      # stubs readWordList and returns "cause"
       friend.readWordList = (callback) ->
         callback "cause"
-      routes.levenshtein(mockReq, mockRes)
+
+      routes.levenshtein mockReq, mockRes
