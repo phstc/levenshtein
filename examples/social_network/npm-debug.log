@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@1.1.25
+3 info using node@v0.6.19
+4 verbose node symlink /usr/local/bin/node
+5 verbose config file /Users/pablo/.npmrc
+6 verbose config file /usr/local/etc/npmrc
+7 verbose config file /usr/local/lib/node_modules/npm/npmrc
+8 verbose read json /Users/pablo/workspace/levenshtein/examples/social_network/package.json
+9 verbose caching json /Users/pablo/workspace/levenshtein/examples/social_network/package.json
+10 verbose loadDefaults social-network@0.0.1
+11 verbose run-script [ 'prestart', 'start', 'poststart' ]
+12 info prestart social-network@0.0.1
+13 info start social-network@0.0.1
+14 verbose unsafe-perm in lifecycle true
+15 silly exec sh "-c" "make server"
+16 silly sh,-c,make server,/Users/pablo/workspace/levenshtein/examples/social_network spawning
+17 info social-network@0.0.1 Failed to exec start script
+18 error social-network@0.0.1 start: `make server`
+18 error `sh "-c" "make server"` failed with 2
+19 error Failed at the social-network@0.0.1 start script.
+19 error This is most likely a problem with the social-network package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     make server
+19 error You can get their info via:
+19 error     npm owner ls social-network
+19 error There is likely additional logging output above.
+20 error System Darwin 12.2.0
+21 error command "node" "/usr/local/bin/npm" "start"
+22 error cwd /Users/pablo/workspace/levenshtein/examples/social_network
+23 error node -v v0.6.19
+24 error npm -v 1.1.25
+25 error code ELIFECYCLE
+26 error message social-network@0.0.1 start: `make server`
+26 error message `sh "-c" "make server"` failed with 2
+27 verbose exit [ 1, true ]
