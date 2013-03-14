@@ -2,17 +2,13 @@
 
 It's an implementation of [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) in [CoffeeScript](http://coffeescript.org).
 
-## The implementation
-
-### CoffeeScript
-
-    src/Levenshtein.coffee
-
 ## How to use it?
 
 ### To compile CoffeeScript into JavaScript
 
     $ coffee --compile src/Levenshtein.coffee
+
+It generates `src/Levenshtein.js`.
 
 ### To run in the browser
 
@@ -30,9 +26,15 @@ Then...
 
     $ npm test
 
-## Node.js?
+## Samples
 
-Have a look at ```samples/WordListReader.coffee``` and ```samples/social_network/models/friend.coffee```.
+### samples/WordListReader.coffee
+
+`WordListReader.coffee` finds similar words in `samples/word.list.txt` to `causes`.
+
+    $ coffee samples/WordListReader.coffee
+
+### samples/social_network/models/friend.coffee
 
 ## License
 
