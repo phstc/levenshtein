@@ -1,4 +1,4 @@
-# Levenshtein distance implementation in CoffeeScript (Javascript)
+# Levenshtein distance implementation in CoffeeScript
 
 It's an implementation of [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) in [CoffeeScript](http://coffeescript.org).
 
@@ -19,7 +19,7 @@ Firstly include the Levenshtein implementation in your code.
 Then...
 
     <script>
-      "pablo".levenshteinDistance("fablo") // should return 1 (substitution)
+      "pablo".levenshteinDistance("fablo"); /* should return 1 (substitution) */
     </script>
 
 ### To run the test suite
@@ -30,7 +30,7 @@ Then...
 
 ### samples/WordListReader.coffee
 
-`WordListReader.coffee` finds similar words in `samples/word.list.txt` to `causes`.
+`WordListReader.coffee` finds similar words to `causes` in `samples/word.list.txt`.
 
     $ coffee samples/WordListReader.coffee
 
